@@ -140,21 +140,24 @@ Run the below command to run Jenkins as a docker container
 - sudo docker logs jenkins
 
 ### Save Docker to repo
-- Publish Docker images
-Ensure that you have a dockerhub account
-Add Dockerhub account name to image
+# Publish Docker images
+  Ensure that you have a dockerhub account
+  Add Dockerhub account name to image
 - docker tag jenkins:latest your-docker-account/jenkins:latest
 - sudo docker tag jenkins/jenkins:lts-jdk17 your-docker-account/jenkins
-Login to docker hub via docker cli
-Ensure docker login works on your system
+# Login to docker hub via docker cli
+  Ensure docker login works on your system
 - sudo apt-get update && apt-get install -y gnupg2
-Login to dockerhub
+# Login to dockerhub
 - sudo docker login
-Push the docker image to dockerhub
+# Push the docker image to dockerhub
 - sudo docker push your-docker-account/jenkins:latest
-Delete docker jenkins
+## Delete docker jenkins
 - sudo docker run --name jenkins -p 8081:8080 -p 50000:50000 -v jenkins:/var/jenkins_home -d shinderavindranath/jenkins
 
+## Pull docker image of jenkins
+- sudo docker run -dt your-docker-account/jenkins
+- sudo docker run --name jenkins -p 8081:8080 -p 50000:50000 -v jenkins:/var/jenkins_home -d shinderavindranath/jenkins
 
 
 ## Run SonarQube as Docker Container
