@@ -138,6 +138,7 @@ Below are some commands commonly used with Git to manage your code in repository
 Run the below command to run Jenkins as a docker container
 - docker run  --name jenkins -p 8080:8080 -p 50000:50000 -v jenkins:/var/jenkins_home -d jenkins/jenkins:lts-jdk17
 - sudo docker logs jenkins
+- sudo docker run --name jenkins -p 8081:8080 -p 50000:50000 -v jenkins:/var/jenkins_home -d shinderavindranath/jenkins
 
 
 
